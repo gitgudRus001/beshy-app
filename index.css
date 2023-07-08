@@ -15,10 +15,6 @@ body {
   width: 150px;
   transition: width 0.3s;
 }
-.container input:focus {
-  width: 250px;
-  transition: width 0.3s;
-}
 .container button {
   padding: 1em;
   width: 100px;
@@ -83,6 +79,14 @@ span {
     font-size: 20px;
     text-align: center;
   }
+  .container input {
+    width: 50px;
+    transition: width 0.3s;
+  }
+  .container input:focus {
+    width: 90px;
+    transition: width 0.3s;
+  }
   .modal .modal-content {
     padding: 1em;
   }
@@ -92,6 +96,12 @@ span {
     font-size: 30px;
     text-align: center;
   }
+  .container input {
+    width: 100px;
+  }
+  .container input:focus {
+    width: 150px;
+  }
   .modal .modal-content {
     padding: 2em;
   }
@@ -100,5 +110,11 @@ span {
   .container h1 {
     font-size: 30px;
     text-align: center;
+  }
+  .container input {
+    width: 100px;
+  }
+  .container input:focus {
+    width: 200px;
   }
 }/*# sourceMappingURL=index.css.map */
