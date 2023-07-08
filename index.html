@@ -18,7 +18,7 @@
             <button id="copy-button">Copy</button>
         </div>
 
-        <p id="text-dislay"></p>
+        <p id="text-dislay" style="padding: 0 1em;"></p>
     </div>
 
     <div class="modal" id="modal">
@@ -45,6 +45,8 @@
         copy_button.addEventListener('click', () => {
             const textToCopy = text_display.textContent;
             copyToClipboard(textToCopy);
+            
+            inputText.value = '';
             
             window.onclick = (event) => {
                 if (event.target == modal) {

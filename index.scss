@@ -19,8 +19,8 @@ body {
     }
 
     input:focus {
-        width: 250px;
-        transition: width .3s;
+        // width: 250px;
+        // transition: width .3s;
     }
 
     button {
@@ -101,10 +101,12 @@ span {
         }
 
         input {
-            width: 70px;
+            width: 50px;
+            transition: width .3s;
         }
         input:focus {
-            width: 120px;
+            width: 90px;
+            transition: width .3s;
         }
     }
 
