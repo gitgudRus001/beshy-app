@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Work+Sans&display=swap");
+body {
+  font-family: "Work sans";
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container input {
+  padding: 1em;
+  width: 150px;
+  transition: width 0.3s;
+}
+.container input:focus {
+  width: 250px;
+  transition: width 0.3s;
+}
+.container button {
+  padding: 1em;
+  width: 100px;
+  border: 0;
+  background-color: rgb(86, 212, 86);
+  color: white;
+  transition: 0.3s;
+}
+.container button:hover {
+  background-color: rgb(75, 181, 75);
+}
+.container p {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal .modal-content {
+  background-color: white;
+  position: absolute;
+  padding: 5em;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  animation: modalcont 1s;
+  text-align: center;
+}
+
+@keyframes modalcont {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+span {
+  font-weight: bold;
+  background: #675BCF;
+  background: linear-gradient(to right, #675BCF 0%, #40CF8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+  .container h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .modal .modal-content {
+    padding: 1em;
+  }
+}
+@media (min-width: 321px) and (max-width: 500px) {
+  .container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .modal .modal-content {
+    padding: 2em;
+  }
+}
+@media (min-width: 501px) and (max-width: 775px) {
+  .container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=index.css.map */

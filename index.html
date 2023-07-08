@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Bakit malungkot ang beshy ko? <span>TEXT GENERATOR</span></h1>
+
+        <div class="input">
+            <input type="text" id="input-display" placeholder="Type mo dito beshy...">
+            <button id="copy-button">Copy</button>
+        </div>
+
+        <p id="text-dislay"></p>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>Na-copy na beshy!</p>
+        </div>
+    </div>
+    
+
+    <script>
+       let text_display = document.getElementById("text-dislay");
+       let input_display = document.getElementById("input-display");
+       let copy_button = document.getElementById("copy-button");
+       let modal = document.getElementById("modal");
+
+        input_display.addEventListener('input', () => {
+            const inputText = input_display.value;
+            const emojiText = inputText.split(' ').join(' 🤸‍♀️ ');
+
+            text_display.textContent = emojiText;
+        });
+
+
+        copy_button.addEventListener('click', () => {
+            const textToCopy = text_display.textContent;
+            copyToClipboard(textToCopy);
+            
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                 modal.style.display = "none";
+            }}
+
+            setTimeout(() => {
+                modal.style.display = 'block';
+                
+
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 1500)
+            }, 100)
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    console.log('Text copied to clipboard');
+                })
+                .catch((error) => {
+                    console.error('Failed to copy text:', error);
+                });
+        }
+
+        
+    </script>
+</body>
+</html>
