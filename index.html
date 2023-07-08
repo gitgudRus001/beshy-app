@@ -46,7 +46,8 @@
             const textToCopy = text_display.textContent;
             copyToClipboard(textToCopy);
             
-          
+            input_display.value = ""
+            text_display.textContent = ""
             
             window.onclick = (event) => {
                 if (event.target == modal) {
