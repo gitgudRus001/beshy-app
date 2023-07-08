@@ -99,6 +99,13 @@ span {
             font-size: 20px;
             text-align: center;
         }
+
+        input {
+            width: 70px;
+        }
+        input:focus {
+            width: 150px;
+        }
     }
 
     .modal {
@@ -115,6 +122,13 @@ span {
             font-size: 30px;
             text-align: center;
         }
+
+        input {
+            width: 100px;
+        }
+        input:focus {
+            width: 150px;
+        }
     }
 
     .modal {
@@ -130,6 +144,12 @@ span {
         h1 {
             font-size: 30px;
             text-align: center;
+        }
+        input {
+            width: 100px;
+        }
+        input:focus {
+            width: 200px;
         }
     }
 }
